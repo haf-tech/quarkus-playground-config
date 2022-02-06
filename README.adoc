@@ -1,0 +1,43 @@
+= Quarkus Playground - GitOps configuration
+:author: Hafid Haddouti
+:toc: macro
+:toclevels: 4
+:sectlinks:
+:sectanchors:
+
+The configuration to deploy the link:https://github.com/haf-tech/quarkus-playground[] project.
+
+toc::[]
+
+== Overview
+
+GitOps recommends the separation of source and configuration in own repositories. This simplifies the life cycle management and any changes in the configuration will not immediately trigger a re-build, vice versa.
+
+The git branches symbolize an own stage, like `dev`, `test`, `prod`.
+The file `image.version` contains the current image digest.
+
+An ArgoCD instance will observe this repository and branches and reconciles any changes in the cluster.
+
+== Summary
+
+Holds the GitOps configuration.
+
+== References
+
+* tbd
+
+== Open
+
+N/A
+
+
+== License
+
+This article is licensed under the Apache License, Version 2.
+Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant
+to their own separate licenses. Contributions are subject to the
+link:https://developercertificate.org/[Developer Certificate of Origin, Version 1.1] and the
+link:https://www.apache.org/licenses/LICENSE-2.0.txt[Apache License, Version 2].
+
+See also link:https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN[Apache License FAQ]
+.

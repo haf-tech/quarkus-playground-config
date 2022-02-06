@@ -1,0 +1,27 @@
+# Helm chart: quarkus-playground
+# Stage: test
+# contains only the changed fields
+
+replicaCount: 1
+stage: test
+config:
+#  configmap: quarkus-playground-dev-configmap
+  secret: quarkus-playground-test-secret
+
+
+image:
+  repository: image-registry.openshift-image-registry.svc:5000/test/quarkus-playground
+  tag: jvm-v2
+  pullPolicy: Always
+
+ingress:
+  enabled: true
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+
+  basedomain: "example.local"
+  hosts: 
+    - subdomain: "quarkus-playground-test-cicd"
+      paths: 
+        - "/"

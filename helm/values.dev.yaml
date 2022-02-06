@@ -1,0 +1,14 @@
+# Helm chart: quarkus-playground
+# Stage: dev
+
+replicaCount: 1
+stage: dev
+config:
+  configmap: quarkus-playground-dev-configmap
+  secret: quarkus-playground-dev-secret
+
+
+image:
+  repository: image-registry.openshift-image-registry.svc:5000/test/quarkus-playground
+  tag: latest
+  pullPolicy: Always
