@@ -4,7 +4,7 @@
 replicaCount: 1
 stage: dev
 config:
-  configmap: quarkus-playground-dev-configmap
+  #configmap: quarkus-playground-dev-configmap
   secret: quarkus-playground-dev-secret
   namespace: demo-quarkus-dev
   #imageNamespace: demo-quarkus-cicd
