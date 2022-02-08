@@ -7,6 +7,8 @@ stage: test
 config:
 #  configmap: quarkus-playground-dev-configmap
   secret: quarkus-playground-test-secret
+  namespace: demo-quarkus-test
+  #imageNamespace: demo-quarkus-cicd
 
 
 image:

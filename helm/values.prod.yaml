@@ -7,6 +7,8 @@ stage: prod
 config:
   configmap: dummy-configmap
   secret: dummy-secret
+  namespace: demo-quarkus-prod
+  #imageNamespace: demo-quarkus-cicd
 
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground

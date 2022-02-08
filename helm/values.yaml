@@ -8,6 +8,8 @@ owner: lab-tech
 config:
   configmap: 
   secret: 
+  namespace:
+  imageNamespace: demo-quarkus-cicd
 
 image:
   repository: nginx
