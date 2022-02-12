@@ -5,7 +5,7 @@ replicaCount: 1
 stage: prod
 
 config:
-  configmap: dummy-configmap
+  #configmap: dummy-configmap
   secret: quarkus-playground-prod-secret
   namespace: demo-quarkus-prod
   #imageNamespace: demo-quarkus-cicd
