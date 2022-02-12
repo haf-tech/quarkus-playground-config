@@ -2,7 +2,7 @@
 
 config:
   names:
-    base: 'argocd-'
+    base: 'argocd-demo-quarkus'
   argocdNamespace: demo-quarkus-cicd
   projects:
   - namespace: demo-quarkus-dev

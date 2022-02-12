@@ -1,14 +1,14 @@
 # ArgoCD Application
 # one repo, observing branches, results in own ArgoCD App
 {{- range .Values.config.projects }}
-{{- $currentName := printf "%s%s" $.Values.config.names.base .namespace }}
+{{- $currentName := printf "%s-%s" $.Values.config.names.base .namespace }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ $currentName }}
 spec:
-  project: "{{ $currentName }}-prj"
+  project: "{{ $.Values.config.names.base }}-prj"
   source:
     repoURL: https://github.com/haf-tech/quarkus-playground-config.git
     targetRevision: 'main'
