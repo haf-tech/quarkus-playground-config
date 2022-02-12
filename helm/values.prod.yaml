@@ -6,13 +6,24 @@ stage: prod
 
 config:
   configmap: dummy-configmap
-  secret: dummy-secret
+  secret: quarkus-playground-prod-secret
   namespace: demo-quarkus-prod
   #imageNamespace: demo-quarkus-cicd
 
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
-  tag: jvm-v2
+  tag: stable
   pullPolicy: Always
 
+ingress:
+  enabled: true
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+
+  basedomain: ""
+  hosts: 
+    - subdomain: "quarkus-playground-prod"
+      paths: 
+        - "/"
    
