@@ -28,7 +28,7 @@ spec:
 {{- end }}
   rules:
   {{- range .Values.ingress.hosts }}
-    - host: "{{ .subdomain }}.{{ $.Values.ingress.basedomain }}"
+    - host: "{{ .subdomain }}{{ $.Values.ingress.basedomain }}"
       http:
         paths:
         {{- range .paths }}
