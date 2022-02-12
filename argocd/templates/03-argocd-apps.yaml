@@ -1,7 +1,7 @@
 # ArgoCD Application
 # one repo, observing branches, results in own ArgoCD App
 {{- range .Values.config.projects }}
-{{- $currentName := printf "%s%s" $.Values.config.names.base .namespace -}}
+{{- $currentName := printf "%s%s" $.Values.config.names.base .namespace }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
