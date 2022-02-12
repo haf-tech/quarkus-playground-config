@@ -1,6 +1,6 @@
 # Helm chart: quarkus-playground
 # Stage: dev
-
+# 
 replicaCount: 1
 stage: dev
 config:
