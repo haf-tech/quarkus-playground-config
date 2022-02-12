@@ -11,7 +11,7 @@ spec:
   project: "{{ $.Values.config.names.base }}-prj"
   source:
     repoURL: https://github.com/haf-tech/quarkus-playground-config.git
-    targetRevision: 'main'
+    targetRevision: '{{ .branch }}'
     path: 'helm'
     helm:
       valueFiles:
