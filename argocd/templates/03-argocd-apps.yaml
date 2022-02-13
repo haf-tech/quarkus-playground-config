@@ -8,7 +8,7 @@ kind: Application
 metadata:
   name: {{ $currentName }}
 spec:
-  project: "{{ $.Values.config.names.base }}-prj"
+  project: "{{ $.Values.config.bootstrap.project }}"
   source:
     repoURL: https://github.com/haf-tech/quarkus-playground-config.git
     targetRevision: '{{ .branch }}'
