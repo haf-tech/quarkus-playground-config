@@ -9,6 +9,8 @@ config:
   secret: quarkus-playground-test-secret
   namespace: demo-quarkus-test
   #imageNamespace: demo-quarkus-cicd
+  externalSecret:
+    enabled: true
 
 
 image:
