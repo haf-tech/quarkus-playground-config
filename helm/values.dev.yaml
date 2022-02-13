@@ -8,7 +8,8 @@ config:
   secret: quarkus-playground-dev-secret
   namespace: demo-quarkus-dev
   #imageNamespace: demo-quarkus-cicd
-
+  externalSecret:
+    enabled: true
 
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
