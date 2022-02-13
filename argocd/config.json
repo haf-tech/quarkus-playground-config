@@ -5,7 +5,7 @@
     "path": "helm",
     "revision": "main",
     "namespace": "demo-quarkus-dev",
-    "project": "argocd-demo-quarkus-prj",
+    "project": "argocd-demo-quarkus-prj2",
     "valueFile": "values.dev.yaml",
     "releaseName": "demo-quarkus-dev"
   },
@@ -15,7 +15,7 @@
     "path": "helm",
     "revision": "test",
     "namespace": "demo-quarkus-test",
-    "project": "argocd-demo-quarkus-prj",
+    "project": "argocd-demo-quarkus-prj2",
     "valueFile": "values.test.yaml",
     "releaseName": "demo-quarkus-test"
   },
@@ -25,7 +25,7 @@
     "path": "helm",
     "revision": "prod",
     "namespace": "demo-quarkus-prod",
-    "project": "argocd-demo-quarkus-prj",
+    "project": "argocd-demo-quarkus-prj2",
     "valueFile": "values.prod.yaml",
     "releaseName": "demo-quarkus-prod"
   }
