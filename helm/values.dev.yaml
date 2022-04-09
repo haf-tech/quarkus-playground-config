@@ -10,21 +10,19 @@ config:
   #imageNamespace: demo-quarkus-cicd
   externalSecret:
     enabled: true
-
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest
-  digest: null
+  digest: sha256:3663791abc50c432fd8c214ce8a5197f6e44ca80a0600c4352ddc7e173450a9b
   pullPolicy: Always
-
 ingress:
   enabled: true
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
 
   basedomain: ""
-  hosts: 
+  hosts:
     - subdomain: "quarkus-playground-dev-cicd"
-      paths: 
+      paths:
         - "/"
