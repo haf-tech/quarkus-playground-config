@@ -10,6 +10,9 @@ config:
   #imageNamespace: demo-quarkus-cicd
   externalSecret:
     enabled: true
+  route:
+    enabled: true
+    
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest

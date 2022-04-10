@@ -1,0 +1,24 @@
+{{- if .Values.route.enabled -}}
+{{- $serviceName := include "quarkus-playground.fullname" . -}}
+{{- $fullName := include "quarkus-playground.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ template "quarkus-playground.name" . }}
+  labels:
+    app: {{ template "quarkus-playground.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  to:
+    kind: Service
+    name: {{ $fullName }}-svc
+  port:
+    targetPort: http
+  {{- if .Values.route.tls }}
+  tls:
+{{ toYaml .Values.route.tls | indent 4 }}
+  {{- end -}}
+{{- end -}}

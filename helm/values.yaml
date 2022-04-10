@@ -12,6 +12,8 @@ config:
   imageNamespace: demo-quarkus-cicd
   externalSecret:
     enabled: false
+  route:
+    enabled: false
 
 image:
   repository: nginx
