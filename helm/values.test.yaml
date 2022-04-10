@@ -16,7 +16,7 @@ config:
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest
-  digest: null
+  digest: ""
   pullPolicy: Always
 
 ingress:

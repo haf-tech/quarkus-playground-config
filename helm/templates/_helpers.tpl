@@ -65,3 +65,14 @@ Create the name of the service account to use
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Create the image path for the passed in image field
+*/}}
+{{- define "quarkus-playground.image" -}}
+{{- if and (.digest) (eq (substr 0 7 .digest) "sha256:") -}}
+{{- printf "%s@%s" .repository .digest -}}
+{{- else -}}
+{{- printf "%s:%s" .repository .tag -}}
+{{- end -}}
+{{- end -}}

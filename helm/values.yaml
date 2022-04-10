@@ -17,6 +17,7 @@ image:
   repository: nginx
   tag: zero
   pullPolicy: IfNotPresent
+  digest: ""
 
 imagePullSecrets: []
 nameOverride: ""

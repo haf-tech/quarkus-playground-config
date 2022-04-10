@@ -1,3 +1,5 @@
+
+{{- $imgUrl := include "quarkus-playground.image" .Values.image }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,7 +27,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ $imgUrl }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
