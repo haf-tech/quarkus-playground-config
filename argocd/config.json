@@ -3,7 +3,7 @@
     "name": "demo-quarkus-dev",
     "repo": "https://github.com/haf-tech/quarkus-playground-config.git",
     "srcPath": "helm",
-    "revision": "main",
+    "revision": "test-promotion",
     "namespace": "demo-quarkus-dev",
     "project": "demo-quarkus-app-prj",
     "valueFile": "values.dev.yaml",
