@@ -1,4 +1,4 @@
-{{- if .Values.route.enabled -}}
+{{- if .Values.config.route.enabled -}}
 {{- $serviceName := include "quarkus-playground.fullname" . -}}
 {{- $fullName := include "quarkus-playground.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
