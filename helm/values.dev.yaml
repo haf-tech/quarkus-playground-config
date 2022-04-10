@@ -17,7 +17,7 @@ route:
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest
-  digest: "sha256:2c5bd026a171d3a59d9426f6561e1fab36533be1d2df1288f8d513f671acfa13"
+  digest: "sha256:092650ba62e9bc50efd8904394e43bab6befa313955fc37ac78959ff0d8b2dbf"
   pullPolicy: Always
 ingress:
   enabled: true
