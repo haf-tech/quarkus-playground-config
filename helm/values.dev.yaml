@@ -13,7 +13,7 @@ config:
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest
-  digest: sha256:0f64363bc7baadc76db6e5bd73dcab4ae7a42b224cafea70a892ee9872ed6c55
+  digest: sha256:050be1a6bdf156634a16f4301ed19e7a6d0e6959757b7b26164818b3ef3c6b82
   pullPolicy: Always
 ingress:
   enabled: true
