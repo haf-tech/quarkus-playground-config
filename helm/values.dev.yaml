@@ -10,17 +10,14 @@ config:
   #imageNamespace: demo-quarkus-cicd
   externalSecret:
     enabled: true
-
-
 route:
   enabled: true
   tls:
     termination: edge
-
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest
-  digest: "sha256:c61073eced7195c9c6c091632a6a1309bc1d5240484fca4fdfb934331deebf98"
+  digest: "sha256:c9035fd9648dce3420b07431d0ea2ef92f8752697689629463492fb14262baee"
   pullPolicy: Always
 ingress:
   enabled: true
