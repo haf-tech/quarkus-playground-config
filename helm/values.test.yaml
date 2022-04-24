@@ -1,32 +1,28 @@
 # Helm chart: quarkus-playground
 # Stage: test
 # contains only the changed fields
-
 replicaCount: 1
 stage: test
 config:
-#  configmap: quarkus-playground-dev-configmap
+  #  configmap: quarkus-playground-dev-configmap
   secret: quarkus-playground-test-secret
   namespace: demo-quarkus-test
   #imageNamespace: demo-quarkus-cicd
   externalSecret:
     enabled: true
-
-
 image:
   repository: image-registry.openshift-image-registry.svc:5000/demo-quarkus-cicd/quarkus-playground
   tag: latest
-  digest: ""
+  digest: "sha256:ddbb383907ebf5844f4e79255e33b05dfc7b729512c1a8e8e4e5c269cd6fb129"
   pullPolicy: Always
-
 ingress:
   enabled: true
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  # kubernetes.io/ingress.class: nginx
+  # kubernetes.io/tls-acme: "true"
 
   basedomain: ""
-  hosts: 
+  hosts:
     - subdomain: "quarkus-playground-test"
-      paths: 
+      paths:
         - "/"
