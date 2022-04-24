@@ -1,0 +1,32 @@
+[
+  {
+    "name": "demo-quarkus-dev",
+    "repo": "git@github.com:haf-tech/quarkus-playground-config.git",
+    "srcPath": "helm",
+    "revision": "test-promotion",
+    "namespace": "demo-quarkus-dev",
+    "project": "demo-quarkus-app-prj",
+    "valueFile": "values.dev.yaml",
+    "releaseName": "demo-quarkus-dev"
+  },
+  {
+    "name": "demo-quarkus-test",
+    "repo": "git@github.com:haf-tech/quarkus-playground-config.git",
+    "srcPath": "helm",
+    "revision": "test-promotion",
+    "namespace": "demo-quarkus-test",
+    "project": "demo-quarkus-app-prj",
+    "valueFile": "values.test.yaml",
+    "releaseName": "demo-quarkus-test"
+  },
+  {
+    "name": "demo-quarkus-prod",
+    "repo": "git@github.com:haf-tech/quarkus-playground-config.git",
+    "srcPath": "helm",
+    "revision": "test-promotion",
+    "namespace": "demo-quarkus-prod",
+    "project": "demo-quarkus-app-prj",
+    "valueFile": "values.prod.yaml",
+    "releaseName": "demo-quarkus-prod"
+  }
+]
